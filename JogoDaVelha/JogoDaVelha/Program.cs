@@ -4,7 +4,9 @@
     {
         static void Main(string[] args)
         {
+            
             new JogoDaVelha().Tabuleiro();
+            
         }
     }
 }

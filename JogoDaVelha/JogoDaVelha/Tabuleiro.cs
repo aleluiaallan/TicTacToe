@@ -28,6 +28,14 @@ namespace JogoDaVelha
                 VerficarFimDeJogo();
                 MudarVez();
             }
+            Console.WriteLine("Deseja Jogar novamente? 1-sim ou 2-nao");
+            var option = short.Parse(Console.ReadLine());
+
+
+            if (option == 1)
+                new JogoDaVelha().Tabuleiro();
+            else
+                return;
         }
 
         private void MudarVez()
@@ -151,8 +159,10 @@ namespace JogoDaVelha
 
         private string ObterTabela()
         {
-            return $"__{posicoes[0]}__|__{posicoes[1]}__|__{posicoes[2]}__\n" +
-                   $"__{posicoes[3]}__|__{posicoes[4]}__|__{posicoes[5]}__\n" +
+            return $"  {posicoes[0]}  |  {posicoes[1]}  |  {posicoes[2]}\n" +
+                   $"-----+-----+-----\n" +
+                   $"  {posicoes[3]}  |  {posicoes[4]}  |  {posicoes[5]}\n" +
+                   $"-----+-----+-----\n" +
                    $"  {posicoes[6]}  |  {posicoes[7]}  |  {posicoes[8]}  \n\n";
         }
     }
